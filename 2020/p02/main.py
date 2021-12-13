@@ -1,0 +1,1 @@
+with open("input.txt") as f: print(len(list(filter(lambda lst: int(lst[0].split("-")[0]) <= len(list(filter(lambda x: x == lst[1][0], lst[2]))) <= int(lst[0].split("-")[1]), map(lambda s: s.strip().split(" "), f.readlines())))))
