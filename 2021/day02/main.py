@@ -1,0 +1,1 @@
+with open ("input.txt") as f: (lambda pos: print(pos[0]*pos[1]))((lambda lines: [sum(int(x[1]) for x in filter(lambda t: t[0] == "forward", map(lambda line: line.split(" "), lines))),sum(int(x[1]) * (-1 if x[0] == "up" else 1) for x in filter(lambda t: t[0] != "forward", map(lambda line: line.split(" "), lines)))])(f.readlines()))
